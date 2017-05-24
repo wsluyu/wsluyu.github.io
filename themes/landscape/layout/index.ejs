@@ -1,0 +1,13 @@
+<% page.posts.each(function(post){ %>
+<% post.excerpt = post.excerpt || post.content.slice(0, 120) %>
+    <%- partial('_partial/article', {post: post, index: true}) %>
+<% }) %>
+
+<% if (page.total > 1){ %>
+  <nav id="page-nav">
+    <%- paginator({
+      prev_text: "&laquo; 前一页",
+      next_text: "后一页 &raquo;"
+    }) %>
+  </nav>
+<% } %>
