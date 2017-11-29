@@ -52,17 +52,17 @@ Jenkins环境搭建
 
 输入java –version（提供给你们的版本应该是1.7.0.13）
 
-![]()
+![](/bimg/5.png)
 
  
 
 输入java
 
-![]()
+![](/bimg/6.png)
 
 输入javac
 
-![]()
+![](/bimg/6.png)
 
 三张图都看到了，就说明java环境配置成功。
 
@@ -79,6 +79,7 @@ Jenkins环境搭建
 3. bin 文件夹，找到里面的startup.bat，运行，最小化该窗口
 
 4. 打开浏览器，输入http：//localhost:8080.如果出现下面的内容说明成功了
+![](/bimg/7.png)
 
 ## 三、Jenkins安装
 
@@ -88,6 +89,6 @@ Jenkins环境搭建
 
 2.运行 [**Java**](http://lib.csdn.net/base/17) -jar jenkins.war
 
- 
+ ![](/bimg/8.png)
 
 还有一种安装方式就是将下载的war包文件部署到 servlet 容器tomcat/webapps目录下，在浏览器的URL地址栏中输入类似http://localhost:8080/jenkins/这样的地址即可。下图是安装成功后的界面
