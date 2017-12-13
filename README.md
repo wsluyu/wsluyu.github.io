@@ -16,7 +16,7 @@ My Blog
 ## 如何写博客
 第一步，下载项目，并切换到source分支
 
-	git clone git@github.com:wsluyu/wsluyu.github.io.git
+	git clone git@github.com:wsluyu/wsluyu.github.io.git #第一次 没有的时候才clone
 	
 	cd wsluyu.github.io
 	
