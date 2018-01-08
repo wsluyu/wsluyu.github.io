@@ -21,8 +21,7 @@ Postman介绍以及安装
 
 ## 三、Chrome版本和native版本
 chrome插件版本不再维护，现在使用native版本
-区别：
-。。。。。
+
 ## 四、Postman更新
 
 默认自动更新;

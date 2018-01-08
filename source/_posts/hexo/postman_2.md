@@ -1,5 +1,5 @@
 ---
-title: Postman设置变量
+title: Postman进阶篇
 categories: 测试
 tags: Postman
 date: 2017-12-11
@@ -8,17 +8,8 @@ Postman设置变量
 
 <!-- more -->
 
-## 九、postman的sandbox
 
-## 十、使用postman设置请求方法
-
-## 十一、postman与cookie
-
-## 十二、鉴权
-
-## 十三、collection
-
-## 十四、变量
+## 一、变量
 **设置全局变量和环境变量**
 例如：我们的项目有3个环境分别是测试环境、预发布、和线上，它们的domain都是 XXX.chime.me.
 测试环境：test.chime.me
@@ -39,10 +30,10 @@ Postman设置变量
 ![](/bimg/13.jpg)
 
 
-## 十五、运行collection
+## 二、运行collection
 ![](/bimg/14.jpg)
 
-## 十六、从命令行运行postman脚本
+## 三、从命令行运行postman脚本
 运行准备：
 导出collection
 安装nodejs和npm
@@ -71,4 +62,3 @@ http://nodejs.cn/download/
 -d ：添加测试数据变量
 -r ：生成报告的格式，可生成多种格式的报告
 
-## 十七、导出Python脚本进行数据驱动
