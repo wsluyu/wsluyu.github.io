@@ -35,7 +35,6 @@ pip下载地址：https://pypi.python.org/pypi/pip
 
 ## ——安装selenium
 cmd.exe:
-
 	>pip install selenium==2.48.0 //指定版本号安装
 
 	>pip uninstall selenium //卸载当前安装的包
