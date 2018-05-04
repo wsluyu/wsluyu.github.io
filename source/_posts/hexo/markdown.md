@@ -28,6 +28,16 @@ date: 2017-05-24
         </tr>
     </table>
 
+下面是另一种格式的代码
+
+```html
+<table>
+    <tr>
+        <td>Foo</td>
+    </tr>
+</table>
+```
+
 无序列表
 
 - 列表项
