@@ -1,24 +1,43 @@
 env:
   global:
-    - GH_REF: github.com/exp-team/exp-team.github.io.git
-    - secure: "pugvKV4WLzhxKZlXFeb2L7mju9rolTEuzyILMEI5k8Zrh76AHFZ/y/AePCrxFVepK5rt12jLfxoF81WoZ5cPaEZXBPStQ/8GzXjCGXV7wL5DOuMYr9NppjosLi7TEnNxtCoXAojUKvn5tI5HTjF291dYKVWCs9yQKAQXUR6PDwoQMhR0gsMVisf0m8HK+994EvXdfHil+Oqs+R0j0n1mMJLQgloQx8hGMyHSvSUeu4uiRP+WsWhKR2dDmNTxUsn162qSXEC0UiwxpnDYrfDP4kKi2a3ZjKq6v9ptxpU/SrkP9dkmwLlhr5dCBLDZb6tycgsvL6/JJJWRPIijlTJCPFCFRAKKu1mgweXvmY2caeRtiz1NTf48TPa5Y0Z9qmtD08S5qPInvXfwLQ3I8jAktd9zh6bb4H7cqTxMSjglIvHDkR8s1uBIKbTsPHll/oMn19tY3iOwglfQ8rEDSWzxO7LcszvFjk7NLH/qkT9aMwqcY0yLt6IfTwAtB40wsEUXHTqZlt3CPWvE22hRIKfSmVVAsOyRU6t4XxW5p5lilRhTGTwy9KeQE2rpB6sim17dQakzTE8Xu2r9V2l/0JVafZZ/QL72I8DptLWNNCxpFImLw0nmiPJBGzofDJNDdtmN9uSBc9RUMcafQFIrh2aZK1VCDEqAP+2UATmrQiRdesQ="
+    - GH_REF: github.com/wsluyu/wsluyu.github.io.git #设置GH_REF，注意更改yourname
 
-# S: Build Lifecycle
+# 指定语言环境
+language: node_js
+# 指定需要sudo权限
+sudo: required
+# 指定node_js版本
+node_js: 
+  - 8.9.4
+# 指定缓存模块，可选。缓存可加快编译速度。
+cache:
+  directories:
+    - node_modules
+
+# 指定博客源码分支，因人而异。hexo博客源码托管在独立repo则不用设置此项
+branches:
+  only:
+    - source 
+
+before_install:
+  - npm install -g hexo-cli@1.0.2
+
+# Start: Build Lifecycle
 install:
   - npm install
 
-before_script:
-  - npm install -g hexo-cli@1.0.2
-
+# 执行清缓存，生成网页操作
 script:
+  - hexo clean
   - hexo generate
 
+# 设置git提交名，邮箱；替换真实token到_config.yml文件，最后depoy部署
 after_script:
-  - cd public
+  - cd ./public
   - git init
-  - git config user.name "yanhaijing"
-  - git config user.email "yanhaijing@yeah.net"
+  - git config user.name "wsluyu"
+  - git config user.email "wsluyu2011@163.com"
   - git add .
   - git commit -m "travis-ci auto update"
-  - git push -f "https://${GH_TOKEN}@${GH_REF}" master:aaa
-# E: Build LifeCycle
+  - git push -f "https://${GH_TOEKN}@${GH_REF}" master:master
+# End: Build LifeCycle

@@ -1,4 +1,4 @@
-# Jade Lu
+# Jade Lu [![Build Status](https://travis-ci.org/wsluyu/wsluyu.github.io.svg?branch=source)](https://travis-ci.org/wsluyu/wsluyu.github.io)
 My Blog
 
 ## 技术栈
