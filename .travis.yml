@@ -33,11 +33,13 @@ script:
 
 # 设置git提交名，邮箱；替换真实token到_config.yml文件，最后depoy部署
 after_script:
+  - git clone https://${GH_REF} .deploy_git
+  - mv .deploy_git/.git/ ./public/
   - cd ./public
   - git init
   - git config user.name "wsluyu"
   - git config user.email "wsluyu2011@163.com"
   - git add .
-  - git commit -m "travis-ci auto update"
+  - git commit -m "Travis-ci auto update"
   - git push -f "https://${GH_TOEKN}@${GH_REF}" master:master
 # End: Build LifeCycle
