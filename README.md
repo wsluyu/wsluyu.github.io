@@ -17,11 +17,11 @@ My Blog
 第一步，下载项目，并切换到source分支
 
 	git clone git@github.com:wsluyu/wsluyu.github.io.git #第一次 没有的时候才clone
-	
+
 	cd wsluyu.github.io
-	
+
 	git fetch origin
-	
+
 	git checkout -b source origin/source
 
 第二步，安装npm插件，**仅需安装一次**
@@ -46,10 +46,9 @@ My Blog
 	git fetch
 	git rebase origin/source
 
-目前提交到source分之，会自动部署到master分支，参考[使用 Travis CI 自动更新 GitHub Pages](http://notes.iissnan.com/2016/publishing-github-pages-with-travis-ci/)
+目前提交到source分之，会自动部署到master分支，参考[使用Travis CI自动部署Hexo博客](http://www.itfanr.cc/2017/08/09/using-travis-ci-automatic-deploy-hexo-blogs/)
 
-**<del>注意：到此为止了，下面是手动发布过程</del>**
-**注意：自动发布尚未搞定，请使用下面的手动过程**
+**注意：上面push完，会自动将source分支部署到master分支，下面是在本地手动发布的步骤**
 
 发布博文,确认没问题即可发布博文，搞定收工
 
