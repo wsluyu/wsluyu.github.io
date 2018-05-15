@@ -75,3 +75,10 @@ deploy:
 
 baidutongji:
   id: 451b6cdab7062a4e403af7581fa84e64
+
+# 评论
+gitment:
+  owner: wsluyu
+  repo: wsluyu.github.io
+  client_id: c40f69de5e09e3daea14
+  client_secret: d2107ca76b25402999ba58b23308d37368134348

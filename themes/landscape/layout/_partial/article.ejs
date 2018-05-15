@@ -28,6 +28,8 @@
         <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
       <% } else if (post.comments && config.duoshuo) { %>
         <%- partial('duoshuo-html', {title: page.title, path: page.path, url: post.permalink}) %>
+      <% } else if (post.comments && config.gitment) { %>
+        <div id="gitment-container"></div>
       <% } %>
       <%- partial('post/tag') %>
     </footer>
@@ -45,4 +47,19 @@
 </section>
 <% } else if (!index && post.comments && config.duoshuo) { %>  
   <%- partial('duoshuo-js', {name: config.duoshuo.short_name}) %>
+<% } else if (!index && post.comments && config.gitment) { %>
+  <%- css('css/gitment') %>
+  <%- js('js/gitment.browser') %>
+  <script>
+    var gitment = new Gitment({
+      id: '<%= post.path %>', // 可选。默认为 location.href
+      owner: '<%= config.gitment.owner %>',
+      repo: '<%= config.gitment.repo %>',
+      oauth: {
+        client_id: '<%= config.gitment.client_id %>',
+        client_secret: '<%= config.gitment.client_secret %>',
+      },
+    })
+    gitment.render('gitment-container')
+  </script>
 <% } %>
