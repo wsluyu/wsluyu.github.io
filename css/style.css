@@ -837,6 +837,7 @@ a.article-title:hover {
 .article-share-links:after {
   clear: both;
 }
+.article-share-weibo,
 .article-share-twitter,
 .article-share-facebook,
 .article-share-pinterest,
@@ -849,6 +850,7 @@ a.article-title:hover {
   color: #999;
   text-shadow: 0 1px #fff;
 }
+.article-share-weibo:before,
 .article-share-twitter:before,
 .article-share-facebook:before,
 .article-share-pinterest:before,
@@ -864,11 +866,23 @@ a.article-title:hover {
   margin-left: -10px;
   text-align: center;
 }
+.article-share-weibo:hover,
 .article-share-twitter:hover,
 .article-share-facebook:hover,
 .article-share-pinterest:hover,
 .article-share-google:hover {
   color: #fff;
+}
+.article-share-weibo:before {
+  content: '';
+  display: block;
+  background: url("images/weibo.png") 50% 50% no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+}
+.article-share-weibo:hover {
+  background: #ff763b;
 }
 .article-share-twitter:before {
   content: "\f099";
