@@ -270,6 +270,16 @@ $article-share-link
   &:hover
     color: #fff
 
+.article-share-weibo
+  @extend $article-share-link
+  &:before
+    content: ''
+    display: block
+    background: url(images/weibo.png) 50% 50% no-repeat
+    background-size: contain
+  &:hover
+    background: #ff763b
+
 .article-share-twitter
   @extend $article-share-link
   &:before
