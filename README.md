@@ -44,7 +44,7 @@ My Blog
 **遇到冲突怎么办？**如果远程有更新的提交就会发生冲突，请先把远程新的比较合并到本地在提交
 
 	git fetch
-	git rebase origin/source
+	git merge origin/source
 
 目前提交到source分之，会自动部署到master分支，参考[使用Travis CI自动部署Hexo博客](http://www.itfanr.cc/2017/08/09/using-travis-ci-automatic-deploy-hexo-blogs/)
 
