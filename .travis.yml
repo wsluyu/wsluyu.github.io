@@ -36,7 +36,6 @@ after_script:
   - git clone https://${GH_REF} .deploy_git
   - mv .deploy_git/.git/ ./public/
   - cd ./public
-  - git init
   - git config user.name "wsluyu"
   - git config user.email "wsluyu2011@163.com"
   - git add .
