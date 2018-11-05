@@ -2,7 +2,7 @@
 title: Jmeter配置元件-计数器
 categories: 测试
 tags: Jmeter
-date: 2018-11-1
+date: 2018-10-12
 ---
 Jmeter计数器
 <!-- more -->
