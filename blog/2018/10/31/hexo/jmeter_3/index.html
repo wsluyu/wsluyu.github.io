@@ -11,15 +11,15 @@
 <meta property="og:url" content="https://wsluyu.github.io/blog/2018/10/31/hexo/jmeter_3/index.html">
 <meta property="og:site_name" content="Lu Yu">
 <meta property="og:description" content="Jmeter计数器">
-<meta property="og:image" content="https://wsluyu.github.io/bimg/18.png">
-<meta property="og:image" content="https://wsluyu.github.io/bimg/18.png">
-<meta property="og:image" content="https://wsluyu.github.io/bimg/18.png">
-<meta property="og:image" content="https://wsluyu.github.io/bimg/18.png">
-<meta property="og:updated_time" content="2018-11-02T11:48:15.169Z">
+<meta property="og:image" content="https://wsluyu.github.io/bimg/37.jpg">
+<meta property="og:image" content="https://wsluyu.github.io/bimg/38.jpg">
+<meta property="og:image" content="https://wsluyu.github.io/bimg/39.jpg">
+<meta property="og:image" content="https://wsluyu.github.io/bimg/40.jpg">
+<meta property="og:updated_time" content="2018-11-05T08:32:53.502Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jmeter配置元件-计数器">
 <meta name="twitter:description" content="Jmeter计数器">
-<meta name="twitter:image" content="https://wsluyu.github.io/bimg/18.png">
+<meta name="twitter:image" content="https://wsluyu.github.io/bimg/37.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Lu Yu" type="application/atom+xml">
   
@@ -112,8 +112,8 @@ var _hmt = _hmt || [];
       
         <p>Jmeter计数器<br><a id="more"></a></p>
 <h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>需要引用的数据量较大，且要求不能重复或者需要自增，那么可以使用计数器来实现。<br>计数器（counter）：允许用户创建一个在线程组之内都可以被引用的计数器。<br>计数器允许用户配置一个起点,一个最大值,增量数，循环到最大值,然后重新开始,继续这样,直到测试结束。计数器使用long存储的值,所取的范围是2^63——2^63-1.</p>
-<h3 id="1、启动jmeter，添加线程组，右键添加配置元件——计数器"><a href="#1、启动jmeter，添加线程组，右键添加配置元件——计数器" class="headerlink" title="1、启动jmeter，添加线程组，右键添加配置元件——计数器"></a>1、启动jmeter，添加线程组，右键添加配置元件——计数器</h3><p><img src="/bimg/18.png" alt=""></p>
-<p>计数器界面如下：<br><img src="/bimg/18.png" alt=""></p>
+<h3 id="1、启动jmeter，添加线程组，右键添加配置元件——计数器"><a href="#1、启动jmeter，添加线程组，右键添加配置元件——计数器" class="headerlink" title="1、启动jmeter，添加线程组，右键添加配置元件——计数器"></a>1、启动jmeter，添加线程组，右键添加配置元件——计数器</h3><p><img src="/bimg/37.jpg" alt=""></p>
+<p>计数器界面如下：<br><img src="/bimg/38.jpg" alt=""></p>
 <p>启动（start）：给定计数器的起始值、初始值，第一次迭代时，会把该值赋给计数器 </p>
 <p>PS：英文版是Start，Jmeter的中文语言将Start翻译成了“启动”，有些歧义</p>
 <p>递增(Increment)：每次迭代后，给计数器增加的值</p>
@@ -124,13 +124,13 @@ var _hmt = _hmt || [];
 <p>如果勾选，即独立的，则每个用户有自己的值：比如用户#1 获取值为1，用户#2获取值为2。</p>
 <p>每次迭代复原计数器（Reset counter on each Thread Group Iteration）：可选，仅勾选与每用户独立的跟踪计数器时可用；</p>
 <p>如果勾选，则每次线程组迭代，都会重置计数器的值，当线程组是在一个循环控制器内时比较有用。</p>
-<h3 id="2、具体过程"><a href="#2、具体过程" class="headerlink" title="2、具体过程"></a>2、具体过程</h3><h4 id="①计数器设置"><a href="#①计数器设置" class="headerlink" title="①计数器设置"></a>①计数器设置</h4><p><img src="/bimg/18.png" alt=""></p>
-<h4 id="②取样器设置"><a href="#②取样器设置" class="headerlink" title="②取样器设置"></a>②取样器设置</h4><p><img src="/bimg/18.png" alt=""></p>
+<h3 id="2、具体过程"><a href="#2、具体过程" class="headerlink" title="2、具体过程"></a>2、具体过程</h3><h4 id="①计数器设置"><a href="#①计数器设置" class="headerlink" title="①计数器设置"></a>①计数器设置</h4><p><img src="/bimg/39.jpg" alt=""></p>
+<h4 id="②取样器设置"><a href="#②取样器设置" class="headerlink" title="②取样器设置"></a>②取样器设置</h4><p><img src="/bimg/40.jpg" alt=""></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wsluyu.github.io/blog/2018/10/31/hexo/jmeter_3/" data-title=Jmeter配置元件-计数器 data-id="cjnzyh21x000suslbcjtc7xcs" class="article-share-link">分享</a>
+      <a data-url="https://wsluyu.github.io/blog/2018/10/31/hexo/jmeter_3/" data-title=Jmeter配置元件-计数器 data-id="cjo41t715000svqv7l6e7ibmk" class="article-share-link">分享</a>
       
         <div id="gitment-container"></div>
       
