@@ -1,5 +1,5 @@
 ---
-title: 编写一个自动化脚本
+title: 编写一个UI自动化脚本
 categories: 测试
 tags: selenium,python
 date: 2018-2-13
