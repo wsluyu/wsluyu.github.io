@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Jmeter配置元件-计数器 | Lu Yu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Jmeter计数器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jmeter配置元件-计数器">
+<meta property="og:url" content="https://wsluyu.github.io/blog/2018/10/11/hexo/jmeter_3/index.html">
+<meta property="og:site_name" content="Lu Yu">
+<meta property="og:description" content="Jmeter计数器">
+<meta property="og:image" content="https://wsluyu.github.io/bimg/37.jpg">
+<meta property="og:image" content="https://wsluyu.github.io/bimg/38.jpg">
+<meta property="og:image" content="https://wsluyu.github.io/bimg/39.jpg">
+<meta property="og:image" content="https://wsluyu.github.io/bimg/40.jpg">
+<meta property="og:updated_time" content="2022-03-09T07:05:14.483Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jmeter配置元件-计数器">
+<meta name="twitter:description" content="Jmeter计数器">
+<meta name="twitter:image" content="https://wsluyu.github.io/bimg/37.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Lu Yu" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <!-- <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"> -->
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?451b6cdab7062a4e403af7581fa84e64";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Lu Yu</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Lu Yu Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">存档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://wsluyu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-hexo/jmeter_3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2018/10/11/hexo/jmeter_3/" class="article-date">
+  <time datetime="2018-10-11T16:00:00.000Z" itemprop="datePublished">2018-10-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/测试/">测试</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Jmeter配置元件-计数器
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Jmeter计数器<br><a id="more"></a></p>
+<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>需要引用的数据量较大，且要求不能重复或者需要自增，那么可以使用计数器来实现。<br>计数器（counter）：允许用户创建一个在线程组之内都可以被引用的计数器。<br>计数器允许用户配置一个起点,一个最大值,增量数，循环到最大值,然后重新开始,继续这样,直到测试结束。计数器使用long存储的值,所取的范围是2^63——2^63-1.</p>
+<h3 id="1、启动jmeter，添加线程组，右键添加配置元件——计数器"><a href="#1、启动jmeter，添加线程组，右键添加配置元件——计数器" class="headerlink" title="1、启动jmeter，添加线程组，右键添加配置元件——计数器"></a>1、启动jmeter，添加线程组，右键添加配置元件——计数器</h3><p><img src="/bimg/37.jpg" alt></p>
+<p>计数器界面如下：<br><img src="/bimg/38.jpg" alt></p>
+<p>启动（start）：给定计数器的起始值、初始值，第一次迭代时，会把该值赋给计数器 </p>
+<p>PS：英文版是Start，Jmeter的中文语言将Start翻译成了“启动”，有些歧义</p>
+<p>递增(Increment)：每次迭代后，给计数器增加的值</p>
+<p>最大值(Maximum)：计数器的最大值，如果超过最大值，重新设置为初始值(Start)，默认的最大值为Long.MAX_VALUE,2^63-1（如果持续压测，建议最好不要设置最大值）</p>
+<p>Number format：可选格式，比如000，格式化为001，002；默认格式为Long.toString()，但是默认格式下，还是可以当作数字使用</p>
+<p>引用名称(Reference Name)：用于控制在其它元素中引用该值，形式：$(reference_name}</p>
+<p>与每用户独立的跟踪计数器(Track Counter Independently for each User)：全局的计数器，如果不勾选，即全局的，比如用户#1 获取值为1，用户#2获取值还是为1；</p>
+<p>如果勾选，即独立的，则每个用户有自己的值：比如用户#1 获取值为1，用户#2获取值为2。</p>
+<p>每次迭代复原计数器（Reset counter on each Thread Group Iteration）：可选，仅勾选与每用户独立的跟踪计数器时可用；</p>
+<p>如果勾选，则每次线程组迭代，都会重置计数器的值，当线程组是在一个循环控制器内时比较有用。</p>
+<h3 id="2、具体过程"><a href="#2、具体过程" class="headerlink" title="2、具体过程"></a>2、具体过程</h3><h4 id="①计数器设置"><a href="#①计数器设置" class="headerlink" title="①计数器设置"></a>①计数器设置</h4><p><img src="/bimg/39.jpg" alt></p>
+<h4 id="②取样器设置"><a href="#②取样器设置" class="headerlink" title="②取样器设置"></a>②取样器设置</h4><p><img src="/bimg/40.jpg" alt></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wsluyu.github.io/blog/2018/10/11/hexo/jmeter_3/" data-title=Jmeter配置元件-计数器 data-id="cl0j7vifq000v9zoj8kbixnrg" class="article-share-link">分享</a>
+      
+        <div id="gitalk-container"></div>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jmeter/">Jmeter</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2021/12/31/hexo/appium-action/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Appium使用教程基于Python
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2018/04/15/hexo/jmeter_JDBC/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Jmeter连接数据库</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+  <script>
+    var gitalkpath = 'blog/2018/10/11/hexo/jmeter_3/';
+    var gitalktagpath = gitalkpath.split('/').slice(-3).join('/');
+    var gitalk = new Gitalk({
+        clientID: 'c40f69de5e09e3daea14',
+        clientSecret: 'd2107ca76b25402999ba58b23308d37368134348',
+        repo: 'wsluyu.github.io',
+        owner: 'wsluyu',
+        admin: ['wsluyu'],
+        id: gitalktagpath,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+  </script>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Jmeter/">Jmeter</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/appium/">appium</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Charles/">Charles</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jenkins/">Jenkins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jmeter/">Jmeter</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jmeter-MySQL/">Jmeter MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Postman/">Postman</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/">appium</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium-python/">selenium,python</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Charles/" style="font-size: 10px;">Charles</a> <a href="/tags/Jenkins/" style="font-size: 10px;">Jenkins</a> <a href="/tags/Jmeter/" style="font-size: 20px;">Jmeter</a> <a href="/tags/Jmeter-MySQL/" style="font-size: 10px;">Jmeter MySQL</a> <a href="/tags/Postman/" style="font-size: 15px;">Postman</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/appium/" style="font-size: 10px;">appium</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/selenium-python/" style="font-size: 15px;">selenium,python</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2021/12/31/hexo/appium-action/">Appium使用教程基于Python</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2018/10/11/hexo/jmeter_3/">Jmeter配置元件-计数器</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2018/04/15/hexo/jmeter_JDBC/">Jmeter连接数据库</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2018/04/09/hexo/Python code/">Python小程序</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2018/02/12/hexo/selenium+Python_1/">编写一个UI自动化脚本</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Lu Yu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">存档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+<script src="/js/jquery.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
