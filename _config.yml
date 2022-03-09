@@ -77,7 +77,7 @@ baidutongji:
   id: 451b6cdab7062a4e403af7581fa84e64
 
 # 评论
-gitment:
+gitalk:
   owner: wsluyu
   repo: wsluyu.github.io
   client_id: c40f69de5e09e3daea14
